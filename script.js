@@ -1,7 +1,12 @@
 const inputTexto = document.querySelector(".input-texto")
 const mensaje = document.querySelector(".mensaje")
 
-
+function btnEncriptar(){
+    const textoEncriptado = encriptar(inputTexto.value)
+    mensaje.value = textoEncriptado
+    mensaje.style.backgroundImage = "none"
+    inputTexto.value = ""
+ }
 function encriptar(stringEncriptada){
     let matrizCodigo = [["a","enter"],["e","imes"],["i","imes"],["o","ober"],["u","ufat"]]
     stringEncriptada = stringEncriptada.toLowerCase()
