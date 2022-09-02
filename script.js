@@ -18,3 +18,15 @@ function encriptar(stringEncriptada){
     }
     return stringEncriptada
 }
+
+function desencriptar(stringDesencriptada){
+    let matrizCodigo = [["a","enter"],["e","imes"],["i","imes"],["o","ober"],["u","ufat"]]
+    stringDesencriptada = stringDesencriptada.toLowerCase()
+
+    for(let i = 0; i < matrizCodigo.length; i++ ){
+        if(stringDesencriptada.includes(matrizCodigo[i][0])){
+            stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][0],matrizCodigo[i][1])
+        }
+    }
+    return stringDesencriptada
+}
