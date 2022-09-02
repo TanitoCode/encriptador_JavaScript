@@ -1,14 +1,26 @@
+//Declarando constantes y accediendo a ellas mediante sus clase con querySelector
 const inputTexto = document.querySelector(".input-texto")
 const mensaje = document.querySelector(".mensaje")
 
+//Creando funcion para el boton encriptar
 function btnEncriptar(){
     const textoEncriptado = encriptar(inputTexto.value)
     mensaje.value = textoEncriptado
     mensaje.style.backgroundImage = "none"
     inputTexto.value = ""
  }
+
+ //Creando funcion para el boton desencriptar
+
+ function btnDesencriptar(){
+    const textoEncriptado = desencriptar(inputTexto.value)
+    mensaje.value = textoEncriptado
+    //mensaje.style.backgroundImage = "none"
+    inputTexto.value = ""
+ }
+
 function encriptar(stringEncriptada){
-    let matrizCodigo = [["a","enter"],["e","imes"],["i","imes"],["o","ober"],["u","ufat"]]
+    let matrizCodigo = [ ["e","enter"], ["i","imes"], ["a","ai"], ["o","ober"], ["u","ufat"]]
     stringEncriptada = stringEncriptada.toLowerCase()
 
     for(let i = 0; i < matrizCodigo.length; i++ ){
@@ -19,13 +31,14 @@ function encriptar(stringEncriptada){
     return stringEncriptada
 }
 
+
 function desencriptar(stringDesencriptada){
-    let matrizCodigo = [["a","enter"],["e","imes"],["i","imes"],["o","ober"],["u","ufat"]]
+    let matrizCodigo = [ ["e","enter"], ["i","imes"], ["a","ai"], ["o","ober"], ["u","ufat"]]
     stringDesencriptada = stringDesencriptada.toLowerCase()
 
     for(let i = 0; i < matrizCodigo.length; i++ ){
-        if(stringDesencriptada.includes(matrizCodigo[i][0])){
-            stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][0],matrizCodigo[i][1])
+        if(stringDesencriptada.includes(matrizCodigo[i][1])){
+            stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1],matrizCodigo[i][0])
         }
     }
     return stringDesencriptada
