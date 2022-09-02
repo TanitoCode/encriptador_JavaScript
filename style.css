@@ -3,3 +3,14 @@ main {
     margin-left: 80px;
     margin-bottom: 50px;
 }
+
+.mensaje {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 90px;background-image: url(imagenes/Muñeco.png);
+    background-repeat: no-repeat;
+    background-position: 18px;
+    background-size: 300px;
+    
+
+}
