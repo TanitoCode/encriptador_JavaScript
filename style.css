@@ -130,6 +130,9 @@ footer{
     section{
         width: 100%;
     }
+    .input-texto{
+        width: 100%;
+    }
    
     .encriptar, .desencriptar, .copiar{
         display: block;
