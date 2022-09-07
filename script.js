@@ -47,5 +47,22 @@ function desencriptar(stringDesencriptada){
 function copiar(){
     mensaje.select()
     navigator.clipboard.writeText(mensaje.value)
-    mensaje.value = ""
+    mensaje.value = "";
+    const confirmacion = document.querySelector("#confirmaCopia")
+    
+    confirmacion.style.textAlign = "center"
+    confirmacion.innerHTML = "Mensaje Copiado"
+    confirmacion.style.color = "#0A3871"
+    confirmacion.style.backgroundColor = "#c89b7b"
+    confirmacion.style.padding = "25px 0 25px 0"
+    confirmacion.style.fontSize = "20px"
+    confirmacion.style.fontWeight = "bold"
+   confirmacion.style.borderRadius = "5px"
+    confirmacion.style.border = "1px solid #000000"
+    confirmacion.style.display = "flex"
+    document.getElementById("confirmaCopia").style.textAlign = "center";
+    setTimeout(function() {
+        confirmacion.style.display = "none";
+    
+    }, 3000)
 }
